@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/hello-world', function () {
     echo "Hello World";
 });
+
+Route::get('/users/{nome}', function ($nome) {
+    echo $nome;
+});
