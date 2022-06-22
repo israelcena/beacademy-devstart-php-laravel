@@ -17,4 +17,9 @@ class UserController extends Controller
 
         dd($users);
     }
+
+    public function show($id)
+    {
+        dd("O Id do usuário é {$id}");
+    }
 };
