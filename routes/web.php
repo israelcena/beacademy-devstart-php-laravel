@@ -3,5 +3,7 @@
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/users', [UserController::class, 'index'])->name('users.index');
-Route::get('/users/{id}', [UserController::class, 'show'])->name('show-users');
+Route::controller(UserController::class)->group(function () {
+  Route::get('/users', 'index')->name('users.index');
+  Route::get('/users/{id}', 'show')->name('show-users');
+});
